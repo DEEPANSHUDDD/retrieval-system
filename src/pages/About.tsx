@@ -129,7 +129,7 @@ export function About() {
                 <div className={`w-12 h-12 bg-gradient-to-br ${stat.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-[#002D62] mb-2">{stat.value}</h2>
+                <h2 className="text-[#0A192F] mb-2">{stat.value}</h2>
                 <p className="text-gray-600 text-sm">{stat.label}</p>
               </Card>
             </motion.div>

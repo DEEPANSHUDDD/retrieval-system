@@ -320,7 +320,7 @@ export function Analytics() {
                       {index + 1}
                     </div>
                     <div className="flex-1">
-                      <p className="text-gray-900 text-sm mb-1.5 group-hover:text-[#002D62] transition-colors">
+                      <p className="text-gray-900 text-sm mb-1.5 group-hover:text-[#0A192F] transition-colors">
                         {policy.name}
                       </p>
                       <div className="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
