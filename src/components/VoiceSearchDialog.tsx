@@ -43,7 +43,7 @@ export function VoiceSearchDialog({ open, onClose, onSearch }: VoiceSearchDialog
           Use your voice to search for policies, schemes, and regulations. Speak clearly when the microphone is listening.
         </DialogDescription>
         
-        <div className="bg-gradient-to-br from-[#002D62] via-[#003875] to-[#004080] p-8 text-white relative overflow-hidden">
+        <div className="bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#112240] p-8 text-white relative overflow-hidden">
           {/* Background Animation */}
           <div className="absolute inset-0">
             {isListening && (
@@ -58,7 +58,7 @@ export function VoiceSearchDialog({ open, onClose, onSearch }: VoiceSearchDialog
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-400 rounded-full blur-3xl"
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl"
                 />
                 <motion.div
                   animate={{
@@ -70,7 +70,7 @@ export function VoiceSearchDialog({ open, onClose, onSearch }: VoiceSearchDialog
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-400 rounded-full blur-3xl"
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full blur-3xl"
                 />
               </>
             )}
@@ -151,7 +151,7 @@ export function VoiceSearchDialog({ open, onClose, onSearch }: VoiceSearchDialog
                   </Button>
                   <Button
                     onClick={handleSearch}
-                    className="bg-white text-[#002D62] hover:bg-white/90"
+                  className="bg-white text-[#0A192F] hover:bg-white/90"
                   >
                     Search Now
                   </Button>

@@ -27,32 +27,32 @@ export function Analytics() {
       value: '1,247',
       change: '+12%',
       icon: FileText,
-      gradient: 'from-blue-500 to-blue-600',
-      bgGradient: 'from-blue-50 to-blue-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Total Searches',
       value: '26,600',
       change: '+18%',
       icon: Search,
-      gradient: 'from-orange-500 to-orange-600',
-      bgGradient: 'from-orange-50 to-orange-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Active Users',
       value: '3,420',
       change: '+8%',
       icon: Users,
-      gradient: 'from-green-500 to-green-600',
-      bgGradient: 'from-green-50 to-green-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Success Rate',
       value: '94.2%',
       change: '+2.1%',
       icon: TrendingUp,
-      gradient: 'from-purple-500 to-purple-600',
-      bgGradient: 'from-purple-50 to-purple-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
   ];
 
@@ -73,9 +73,9 @@ export function Analytics() {
   ];
 
   const departmentData = [
-    { name: 'Higher Education', value: 35, color: '#002D62' },
-    { name: 'School Education', value: 28, color: '#F97316' },
-    { name: 'Vocational Training', value: 20, color: '#3b82f6' },
+    { name: 'Higher Education', value: 35, color: '#0A192F' },
+    { name: 'School Education', value: 28, color: '#112240' },
+    { name: 'Vocational Training', value: 20, color: '#334155' },
     { name: 'Research & Innovation', value: 17, color: '#10b981' },
   ];
 
@@ -103,7 +103,7 @@ export function Analytics() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100/30 to-gray-50">
       <div className="p-8 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -113,14 +113,14 @@ export function Analytics() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center shadow-lg shadow-black/10">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-[#002D62]">Analytics & Insights</h1>
+              <h1 className="text-[#0A192F]">Analytics & Insights</h1>
             </div>
             <p className="text-gray-600">System usage and performance metrics in real-time</p>
           </div>
-          <Button className="bg-gradient-to-r from-[#002D62] to-[#004080] hover:from-[#001f45] hover:to-[#002D62] text-white shadow-lg shadow-blue-900/20">
+          <Button className="bg-gradient-to-r from-[#0A192F] to-[#112240] hover:from-[#112240] hover:to-[#0A192F] text-white shadow-lg shadow-black/20">
             <Download className="w-4 h-4 mr-2" />
             Export Report
           </Button>
@@ -172,17 +172,17 @@ export function Analytics() {
           >
             <Card className="p-7 border-0 shadow-xl bg-white">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-xl flex items-center justify-center shadow-md">
                   <FileText className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-[#002D62]">Document Usage</h3>
+              <h3 className="text-[#0A192F]">Document Usage</h3>
               </div>
               <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={documentUsageData}>
                   <defs>
                     <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#002D62" stopOpacity={1} />
-                      <stop offset="100%" stopColor="#004080" stopOpacity={1} />
+                      <stop offset="0%" stopColor="#0A192F" stopOpacity={1} />
+                      <stop offset="100%" stopColor="#112240" stopOpacity={1} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -210,17 +210,17 @@ export function Analytics() {
           >
             <Card className="p-7 border-0 shadow-xl bg-white">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-xl flex items-center justify-center shadow-md">
                   <TrendingUp className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-[#002D62]">Search Trends</h3>
+              <h3 className="text-[#0A192F]">Search Trends</h3>
               </div>
               <ResponsiveContainer width="100%" height={300}>
                 <AreaChart data={searchTrendsData}>
                   <defs>
                     <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#F97316" stopOpacity={0.8} />
-                      <stop offset="100%" stopColor="#F97316" stopOpacity={0.1} />
+                      <stop offset="0%" stopColor="#0A192F" stopOpacity={0.8} />
+                      <stop offset="100%" stopColor="#112240" stopOpacity={0.1} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -237,7 +237,7 @@ export function Analytics() {
                   <Area
                     type="monotone"
                     dataKey="searches"
-                    stroke="#F97316"
+                    stroke="#0A192F"
                     strokeWidth={3}
                     fill="url(#areaGradient)"
                   />
@@ -257,10 +257,10 @@ export function Analytics() {
           >
             <Card className="p-7 border-0 shadow-xl bg-white">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-xl flex items-center justify-center shadow-md">
                   <BarChart3 className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-[#002D62]">Top Departments</h3>
+              <h3 className="text-[#0A192F]">Top Departments</h3>
               </div>
               <div className="flex items-center justify-center">
                 <ResponsiveContainer width="100%" height={300}>
@@ -302,10 +302,10 @@ export function Analytics() {
           >
             <Card className="p-7 border-0 shadow-xl bg-white">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-xl flex items-center justify-center shadow-md">
                   <TrendingUp className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-[#002D62]">Most Viewed Policies</h3>
+              <h3 className="text-[#0A192F]">Most Viewed Policies</h3>
               </div>
               <div className="space-y-4">
                 {topPolicies.map((policy, index) => (
@@ -314,13 +314,13 @@ export function Analytics() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.7 + index * 0.1 }}
-                    className="flex items-center gap-4 p-3 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50/30 rounded-xl transition-all group"
+                    className="flex items-center gap-4 p-3 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100/30 rounded-xl transition-all group"
                   >
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#002D62] to-[#004080] text-white rounded-xl flex items-center justify-center text-sm font-semibold flex-shrink-0 shadow-md">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] text-white rounded-xl flex items-center justify-center text-sm font-semibold flex-shrink-0 shadow-md">
                       {index + 1}
                     </div>
                     <div className="flex-1">
-                      <p className="text-gray-900 text-sm mb-1.5 group-hover:text-[#002D62] transition-colors">
+                      <p className="text-gray-900 text-sm mb-1.5 group-hover:text-[#0A192F] transition-colors">
                         {policy.name}
                       </p>
                       <div className="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
@@ -328,7 +328,7 @@ export function Analytics() {
                           initial={{ width: 0 }}
                           animate={{ width: `${(policy.views / 15420) * 100}%` }}
                           transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
-                          className="bg-gradient-to-r from-[#002D62] to-[#F97316] h-2.5 rounded-full"
+                          className="bg-gradient-to-r from-[#0A192F] to-[#112240] h-2.5 rounded-full"
                         />
                       </div>
                     </div>

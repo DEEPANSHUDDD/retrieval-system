@@ -73,7 +73,7 @@ export function Support() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100/30 to-gray-50">
       <div className="p-8 max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -82,10 +82,10 @@ export function Support() {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center shadow-lg shadow-black/10">
               <MessageCircle className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-[#002D62]">Support & Help</h1>
+            <h1 className="text-[#0A192F]">Support & Help</h1>
           </div>
           <p className="text-gray-600">Chat with our AI assistant for instant help 24/7</p>
         </motion.div>
@@ -98,12 +98,12 @@ export function Support() {
         >
           <Card className="border-0 shadow-2xl overflow-hidden bg-white">
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-[#002D62] to-[#004080] p-5 flex items-center gap-3">
+            <div className="bg-gradient-to-r from-[#0A192F] to-[#112240] p-5 flex items-center gap-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center shadow-lg">
                   <Bot className="w-6 h-6 text-white" />
                 </div>
-                <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-400 rounded-full border-2 border-[#002D62]" />
+                <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-400 rounded-full border-2 border-[#0A192F]" />
               </div>
               <div>
                 <h3 className="text-white font-semibold">AI Assistant</h3>
@@ -126,7 +126,7 @@ export function Support() {
                     className={`flex gap-3 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     {message.sender === 'bot' && (
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                         <Bot className="w-5 h-5 text-white" />
                       </div>
                     )}
@@ -134,7 +134,7 @@ export function Support() {
                     <div
                       className={`max-w-[70%] ${
                         message.sender === 'user'
-                          ? 'bg-gradient-to-br from-[#002D62] to-[#004080] text-white shadow-lg shadow-blue-900/20'
+                          ? 'bg-gradient-to-br from-[#0A192F] to-[#112240] text-white shadow-lg shadow-black/20'
                           : 'bg-white text-gray-900 shadow-md border border-gray-100'
                       } rounded-2xl px-5 py-3.5`}
                     >
@@ -149,7 +149,7 @@ export function Support() {
                     </div>
 
                     {message.sender === 'user' && (
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                         <User className="w-5 h-5 text-white" />
                       </div>
                     )}
@@ -162,7 +162,7 @@ export function Support() {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex gap-3 justify-start"
                   >
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                       <Bot className="w-5 h-5 text-white" />
                     </div>
                     <div className="bg-white rounded-2xl px-5 py-3.5 shadow-md border border-gray-100">
@@ -179,9 +179,9 @@ export function Support() {
 
             {/* Quick Questions */}
             {messages.length === 1 && (
-              <div className="px-6 py-5 bg-gradient-to-r from-blue-50 to-purple-50 border-t border-gray-100">
+              <div className="px-6 py-5 bg-gradient-to-r from-gray-50 to-gray-100 border-t border-gray-100">
                 <p className="text-sm text-gray-700 font-medium mb-3 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#F97316]" />
+                  <Sparkles className="w-4 h-4 text-[#0A192F]" />
                   Quick questions to get started:
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -189,7 +189,7 @@ export function Support() {
                     <button
                       key={question.text}
                       onClick={() => setInputValue(question.text)}
-                      className="px-4 py-2.5 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 border border-gray-200 hover:border-[#F97316] text-[#002D62] rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md flex items-center gap-2"
+                      className="px-4 py-2.5 bg-white hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 border border-gray-200 hover:border-[#0A192F] text-[#0A192F] rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md flex items-center gap-2"
                     >
                       <span>{question.icon}</span>
                       <span>{question.text}</span>
@@ -207,12 +207,12 @@ export function Support() {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                   placeholder="Type your message..."
-                  className="flex-1 border-gray-300 focus:border-[#002D62] focus:ring-[#002D62] py-6 px-5 rounded-xl"
+                  className="flex-1 border-gray-300 focus:border-[#0A192F] focus:ring-[#0A192F] py-6 px-5 rounded-xl"
                 />
                 <Button
                   onClick={handleSend}
                   disabled={!inputValue.trim()}
-                  className="bg-gradient-to-r from-[#F97316] to-[#ea6a0a] hover:from-[#ea6a0a] hover:to-[#F97316] text-white px-8 shadow-lg shadow-orange-500/30 disabled:opacity-50"
+                  className="bg-gradient-to-r from-[#0A192F] to-[#112240] hover:from-[#112240] hover:to-[#0A192F] text-white px-8 shadow-lg shadow-black/20 disabled:opacity-50"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send
@@ -233,7 +233,7 @@ export function Support() {
             transition={{ delay: 0.3 }}
           >
             <Card className="p-7 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white group">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
                 <Bot className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-gray-900 mb-3">AI Assistant</h3>
@@ -249,7 +249,7 @@ export function Support() {
             transition={{ delay: 0.4 }}
           >
             <Card className="p-7 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white group">
-              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
                 <Mail className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-gray-900 mb-3">Email Support</h3>
