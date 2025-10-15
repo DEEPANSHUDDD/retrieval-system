@@ -36,32 +36,32 @@ export function Dashboard({ onNavigate }: DashboardProps) {
       description: 'Government policies and regulations',
       count: '435',
       icon: FileText,
-      gradient: 'from-blue-500 to-blue-600',
-      bgGradient: 'from-blue-50 to-blue-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Schemes',
       description: 'Educational schemes and programs',
       count: '280',
       icon: Lightbulb,
-      gradient: 'from-orange-500 to-orange-600',
-      bgGradient: 'from-orange-50 to-orange-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Reports',
       description: 'Detailed reports and analytics',
       count: '150',
       icon: BookOpen,
-      gradient: 'from-purple-500 to-purple-600',
-      bgGradient: 'from-purple-50 to-purple-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
     {
       title: 'Regulations',
       description: 'Latest updates and notifications',
       count: '220',
       icon: Shield,
-      gradient: 'from-green-500 to-green-600',
-      bgGradient: 'from-green-50 to-green-100',
+      gradient: 'from-[#0A192F] to-[#112240]',
+      bgGradient: 'from-gray-50 to-gray-100',
     },
   ];
 
@@ -102,7 +102,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100/30 to-gray-50">
       <div className="p-8 max-w-7xl mx-auto">
         {/* Welcome Section */}
         <motion.div
@@ -111,11 +111,11 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           className="mb-10"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center shadow-lg shadow-black/10">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-[#002D62] flex items-center gap-2">
+              <h1 className="text-[#0A192F] flex items-center gap-2">
                 Welcome to Smart Information Retrieval
               </h1>
               <p className="text-gray-600">
@@ -131,11 +131,11 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <Card className="p-10 mb-10 shadow-2xl border-0 bg-gradient-to-br from-[#002D62] via-[#003875] to-[#004080] relative overflow-hidden">
+          <Card className="p-10 mb-10 shadow-2xl border-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#112240] relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
             </div>
 
             <div className="max-w-4xl mx-auto relative z-10">
@@ -162,7 +162,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                 </button>
                 <Button
                   onClick={handleSearch}
-                  className="bg-gradient-to-r from-[#F97316] to-[#ea6a0a] hover:from-[#ea6a0a] hover:to-[#F97316] text-white px-8 py-6 shadow-lg shadow-orange-500/30"
+                  className="bg-gradient-to-r from-[#0A192F] to-[#112240] hover:from-[#112240] hover:to-[#0A192F] text-white px-8 py-6 shadow-lg shadow-black/20"
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
                   Search with AI
@@ -195,8 +195,8 @@ export function Dashboard({ onNavigate }: DashboardProps) {
         {/* Quick Access Cards */}
         <div className="mb-10">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-[#002D62]">Quick Access</h2>
-            <Button variant="ghost" className="text-[#F97316] hover:text-[#ea6a0a]">
+            <h2 className="text-[#0A192F]">Quick Access</h2>
+            <Button variant="ghost" className="text-[#0A192F] hover:text-[#112240]">
               View All
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -248,10 +248,10 @@ export function Dashboard({ onNavigate }: DashboardProps) {
         >
           <Card className="p-8 border-0 shadow-xl bg-white">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-xl flex items-center justify-center shadow-md">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-[#002D62]">Recent Updates</h2>
+              <h2 className="text-[#0A192F]">Recent Updates</h2>
             </div>
             <div className="space-y-1">
               {recentUpdates.map((update, index) => (
@@ -261,16 +261,16 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
                   onClick={() => onNavigate('document')}
-                  className="flex items-start gap-4 p-5 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50/30 rounded-2xl transition-all duration-200 cursor-pointer group border-l-4 border-transparent hover:border-[#F97316]"
+                  className="flex items-start gap-4 p-5 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100/30 rounded-2xl transition-all duration-200 cursor-pointer group border-l-4 border-transparent hover:border-[#0A192F]"
                 >
-                  <div className={`w-3 h-3 bg-gradient-to-br from-${update.color}-500 to-${update.color}-600 rounded-full mt-2 shadow-md group-hover:scale-125 transition-transform`} />
+                  <div className={`w-3 h-3 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full mt-2 shadow-md group-hover:scale-125 transition-transform`} />
                   <div className="flex-1">
-                    <p className="text-gray-900 mb-2 group-hover:text-[#002D62] transition-colors">
+                    <p className="text-gray-900 mb-2 group-hover:text-[#0A192F] transition-colors">
                       {update.title}
                     </p>
                     <div className="flex items-center gap-3 text-sm">
                       <span className="text-gray-500">{update.date}</span>
-                      <Badge className={`bg-${update.color}-100 text-${update.color}-700 hover:bg-${update.color}-100`}>
+                      <Badge className={`bg-gray-100 text-gray-700 hover:bg-gray-100`}>
                         {update.type}
                       </Badge>
                     </div>
