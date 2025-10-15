@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Lock, Mail, Shield, ArrowRight, Eye, EyeOff } from 'lucide-react';
+import { Lock, Mail, Shield, ArrowRight, Eye, EyeOff, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
@@ -7,9 +7,10 @@ import { motion } from 'motion/react';
 
 interface LoginProps {
   onLogin: () => void;
+  onClose?: () => void;
 }
 
-export function Login({ onLogin }: LoginProps) {
+export function Login({ onLogin, onClose }: LoginProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -163,7 +164,17 @@ export function Login({ onLogin }: LoginProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl p-10 border border-white/20">
+            <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl p-10 border border-white/20 relative">
+              {/* Close Button */}
+              {onClose && (
+                <button
+                  onClick={onClose}
+                  className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                >
+                  <X className="w-5 h-5 text-gray-500" />
+                </button>
+              )}
+
               {/* Mobile Logo */}
               <div className="lg:hidden mb-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl">

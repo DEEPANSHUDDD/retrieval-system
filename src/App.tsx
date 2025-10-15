@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from './components/Layout';
 import { Dashboard } from './pages/Dashboard';
 import { Results } from './pages/Results';
@@ -14,6 +14,16 @@ import { toast } from 'sonner@2.0.3';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  // Initialize with dashboard as default
+  useEffect(() => {
+    // Check if user was previously logged in
+    const savedLoginState = localStorage.getItem('isLoggedIn');
+    if (savedLoginState === 'true') {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -36,18 +46,31 @@ export default function App() {
 
   const handleLogin = () => {
     setIsLoggedIn(true);
+    setShowLogin(false);
+    localStorage.setItem('isLoggedIn', 'true');
     toast.success('Welcome to Smart Information Retrieval System!');
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
+    setCurrentPage('dashboard'); // Return to dashboard after logout
+    localStorage.removeItem('isLoggedIn');
     toast.success('Logged out successfully');
   };
 
-  if (!isLoggedIn) {
+  const handleShowLogin = () => {
+    setShowLogin(true);
+  };
+
+  const handleCloseLogin = () => {
+    setShowLogin(false);
+  };
+
+  // Show login page only when explicitly requested
+  if (showLogin) {
     return (
       <>
-        <Login onLogin={handleLogin} />
+        <Login onLogin={handleLogin} onClose={handleCloseLogin} />
         <Toaster />
       </>
     );
@@ -59,6 +82,8 @@ export default function App() {
         currentPage={currentPage} 
         onNavigate={setCurrentPage}
         onLogout={handleLogout}
+        onShowLogin={handleShowLogin}
+        isLoggedIn={isLoggedIn}
       >
         <AnimatePresence mode="wait">
           <motion.div
