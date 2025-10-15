@@ -7,9 +7,11 @@ interface LayoutProps {
   currentPage: string;
   onNavigate: (page: string) => void;
   onLogout?: () => void;
+  onShowLogin?: () => void;
+  isLoggedIn?: boolean;
 }
 
-export function Layout({ children, currentPage, onNavigate, onLogout }: LayoutProps) {
+export function Layout({ children, currentPage, onNavigate, onLogout, onShowLogin, isLoggedIn }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleNavigate = (page: string) => {
@@ -18,12 +20,12 @@ export function Layout({ children, currentPage, onNavigate, onLogout }: LayoutPr
   };
 
   return (
-    <div className="flex min-h-screen bg-[#F9FAFB]">
+    <div className="flex min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-gray-50">
       {/* Sidebar Overlay */}
       {sidebarOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300"
             onClick={() => setSidebarOpen(false)}
           />
           <div className="fixed left-0 top-0 bottom-0 z-50">
@@ -37,6 +39,8 @@ export function Layout({ children, currentPage, onNavigate, onLogout }: LayoutPr
         <Header 
           onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
           onLogout={onLogout}
+          onShowLogin={onShowLogin}
+          isLoggedIn={isLoggedIn}
         />
         <main className="flex-1 overflow-auto">
           {children}
