@@ -33,12 +33,12 @@ export function About() {
   ];
 
   const teamMembers = [
-    { name: 'Rahul Kumar', role: 'Team Lead & Full Stack Developer', color: 'from-[#0A192F] to-[#112240]' },
-    { name: 'Priya Sharma', role: 'AI/ML Engineer', color: 'from-purple-500 to-purple-600' },
-    { name: 'Amit Patel', role: 'Frontend Developer', color: 'from-[#0A192F] to-[#112240]' },
-    { name: 'Sneha Reddy', role: 'UI/UX Designer', color: 'from-pink-500 to-pink-600' },
-    { name: 'Arjun Singh', role: 'Backend Developer', color: 'from-green-500 to-green-600' },
-    { name: 'Kavya Iyer', role: 'Data Analyst', color: 'from-cyan-500 to-cyan-600' },
+    { name: 'Swastika Kundal', role: 'Team Lead & Developer', color: 'from-blue-500 to-blue-600' },
+    { name: 'Gaurav Sharma', role: 'AI/ML Engineer', color: 'from-purple-500 to-purple-600' },
+    { name: 'Anisha Sahoo', role: 'Frontend Developer', color: 'from-orange-500 to-orange-600' },
+    { name: 'Subhrajyoti Gouda', role: 'UI/UX Designer', color: 'from-pink-500 to-pink-600' },
+    { name: 'Deepanshu kumar', role: 'Full Stack Developer', color: 'from-green-500 to-green-600' },
+    { name: 'Akash Shukla', role: 'backend Developer', color: 'from-cyan-500 to-cyan-600' },
   ];
 
   const stats = [
@@ -265,7 +265,7 @@ export function About() {
                   <Mail className="w-5 h-5 mr-2" />
                   Email Us
                 </Button>
-                <Button className="bg-gradient-to-r from-[#0A192F] to-[#112240] hover:from-[#112240] hover:to-[#0A192F] text-white shadow-xl px-8 py-6">
+                <Button className="bg-white text-[#002D62] hover:bg-gray-100 shadow-xl px-8 py-6">
                   <Github className="w-5 h-5 mr-2" />
                   View on GitHub
                 </Button>
