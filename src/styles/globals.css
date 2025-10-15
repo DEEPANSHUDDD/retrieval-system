@@ -8,13 +8,13 @@
   --card-foreground: #1f2937;
   --popover: #ffffff;
   --popover-foreground: #1f2937;
-  --primary: #0A192F; /* Deep navy */
+  --primary: #002D62;
   --primary-foreground: #ffffff;
   --secondary: #f3f4f6;
   --secondary-foreground: #1f2937;
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
-  --accent: #112240; /* Subtle navy accent */
+  --accent: #F97316;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
@@ -24,21 +24,21 @@
   --switch-background: #d1d5db;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #0A192F;
-  --chart-1: #0A192F; /* navy */
-  --chart-2: #112240; /* navy accent */
-  --chart-3: #334155; /* slate-700 */
-  --chart-4: #10b981; /* emerald for diversity */
-  --chart-5: #8b5cf6; /* violet (kept subtle) */
+  --ring: #002D62;
+  --chart-1: #002D62;
+  --chart-2: #F97316;
+  --chart-3: #3b82f6;
+  --chart-4: #10b981;
+  --chart-5: #8b5cf6;
   --radius: 0.75rem;
-  --sidebar: #0A192F;
+  --sidebar: #002D62;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #112240;
+  --sidebar-primary: #3b82f6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #112240;
+  --sidebar-accent: #1e4a7a;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #112240;
-  --sidebar-ring: #0A192F;
+  --sidebar-border: #1e4a7a;
+  --sidebar-ring: #F97316;
 }
 
 .dark {
@@ -208,12 +208,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0A192F, #112240);
+  background: linear-gradient(180deg, #002D62, #F97316);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0A192F, #112240);
+  background: linear-gradient(180deg, #001f45, #ea6a0a);
 }
 
 /* Smooth transitions for all interactive elements */
@@ -223,7 +223,7 @@ body {
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #0A192F;
+  outline: 2px solid #F97316;
   outline-offset: 2px;
 }
 
@@ -248,7 +248,7 @@ button:active {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #0A192F, #112240);
+  background: linear-gradient(135deg, #002D62, #F97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

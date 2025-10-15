@@ -20,7 +20,7 @@ export function Layout({ children, currentPage, onNavigate, onLogout, onShowLogi
   };
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-gray-50 via-gray-100/20 to-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-gray-50">
       {/* Sidebar Overlay */}
       {sidebarOpen && (
         <>
