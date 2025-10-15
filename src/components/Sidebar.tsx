@@ -17,30 +17,30 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
   ];
 
   return (
-    <div className="w-72 bg-gradient-to-b from-[#002D62] via-[#003875] to-[#002D62] min-h-screen flex flex-col shadow-2xl">
+    <div className="w-72 bg-slate-900 min-h-screen flex flex-col shadow-xl">
       {/* Logo Section */}
-      <div className="p-6 border-b border-white/10">
+      <div className="p-6 border-b border-slate-700">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-3"
         >
           <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
               <Shield className="w-7 h-7 text-white" />
             </div>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-[#002D62]" />
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-slate-900" />
           </div>
           <div>
-            <h2 className="text-white font-semibold">Ministry of Education</h2>
-            <p className="text-white/60 text-xs">Smart Retrieval AI</p>
+            <h2 className="text-white font-semibold text-lg">Ministry of Education</h2>
+            <p className="text-slate-400 text-sm">Smart Retrieval System</p>
           </div>
         </motion.div>
       </div>
 
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-1">
-        <p className="text-white/40 text-xs px-3 mb-3 uppercase tracking-wider">Main Menu</p>
+        <p className="text-slate-400 text-xs px-3 mb-4 uppercase tracking-wider font-medium">Navigation</p>
         <ul className="space-y-1">
           {menuItems.map((item, index) => {
             const Icon = item.icon;
@@ -54,16 +54,16 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
               >
                 <button
                   onClick={() => onNavigate(item.id)}
-                  className={`w-full group relative flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
+                  className={`w-full group relative flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                     isActive
-                      ? 'bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white shadow-lg shadow-blue-500/30'
-                      : 'text-white/70 hover:bg-white/10 hover:text-white'
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-gradient-to-r from-[#3b82f6] to-[#2563eb] rounded-xl"
+                      className="absolute inset-0 bg-blue-600 rounded-lg"
                       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                     />
                   )}
@@ -80,27 +80,27 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
       </nav>
 
       {/* Footer Stats */}
-      <div className="p-4 border-t border-white/10">
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-white/60 text-xs">System Status</span>
-            <span className="text-green-400 text-xs flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+      <div className="p-4 border-t border-slate-700">
+        <div className="bg-slate-800 rounded-lg p-4 mb-4">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-slate-400 text-sm font-medium">System Status</span>
+            <span className="text-emerald-400 text-sm flex items-center gap-2">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               Online
             </span>
           </div>
           <div className="space-y-2">
-            <div className="flex justify-between text-xs">
-              <span className="text-white/60">Documents</span>
-              <span className="text-white">1,247</span>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Documents</span>
+              <span className="text-white font-medium">1,247</span>
             </div>
-            <div className="flex justify-between text-xs">
-              <span className="text-white/60">Active Users</span>
-              <span className="text-white">3,420</span>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-400">Active Users</span>
+              <span className="text-white font-medium">3,420</span>
             </div>
           </div>
         </div>
-        <p className="text-white/30 text-xs text-center">SIH 2025 © All Rights Reserved</p>
+        <p className="text-slate-500 text-xs text-center">© 2025 Ministry of Education. All rights reserved.</p>
       </div>
     </div>
   );
