@@ -102,23 +102,23 @@ export function Dashboard({ onNavigate }: DashboardProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
-      <div className="p-8 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-slate-50">
+      <div className="p-6 lg:p-8 max-w-7xl mx-auto">
         {/* Welcome Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-10"
+          className="mb-8"
         >
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20">
-              <Sparkles className="w-6 h-6 text-white" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+            <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
+              <Sparkles className="w-7 h-7 text-white" />
             </div>
-            <div>
-              <h1 className="text-[#002D62] flex items-center gap-2">
+            <div className="flex-1">
+              <h1 className="text-slate-900 text-xl sm:text-2xl font-semibold mb-2">
                 Welcome to Smart Information Retrieval
               </h1>
-              <p className="text-gray-600">
+              <p className="text-slate-600 text-base sm:text-lg">
                 Search and access comprehensive educational policies, schemes, and documents powered by AI
               </p>
             </div>
@@ -131,38 +131,40 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <Card className="p-10 mb-10 shadow-2xl border-0 bg-gradient-to-br from-[#002D62] via-[#003875] to-[#004080] relative overflow-hidden">
+          <Card className="p-8 lg:p-10 mb-8 shadow-xl border-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 opacity-5">
               <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
             </div>
 
             <div className="max-w-4xl mx-auto relative z-10">
-              <div className="text-center mb-6">
-                <h2 className="text-white mb-2">Ask AI Your Query</h2>
-                <p className="text-white/80">Get instant answers from thousands of educational documents</p>
+              <div className="text-center mb-8">
+                <h2 className="text-white text-2xl font-semibold mb-2">Ask AI Your Query</h2>
+                <p className="text-slate-300 text-lg">Get instant answers from thousands of educational documents</p>
               </div>
 
-              <div className="flex items-center gap-3 bg-white rounded-2xl p-2.5 shadow-2xl">
-                <Search className="w-6 h-6 text-gray-400 ml-4" />
+              <div className="flex items-center gap-3 bg-white rounded-xl p-2 shadow-xl">
+                <Search className="w-5 h-5 text-slate-400 ml-4" />
                 <input
                   type="text"
                   placeholder="Search for policies, schemes, regulations..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  className="flex-1 px-3 py-4 outline-none text-gray-700 placeholder:text-gray-400"
+                  className="flex-1 px-3 py-4 outline-none text-slate-700 placeholder:text-slate-400 text-lg"
+                  aria-label="Search for educational documents"
                 />
                 <button 
                   onClick={() => setVoiceSearchOpen(true)}
-                  className="p-3 hover:bg-gray-100 rounded-xl transition-all duration-200"
+                  className="p-3 hover:bg-slate-100 rounded-lg transition-all duration-200"
+                  aria-label="Voice search"
                 >
-                  <Mic className="w-5 h-5 text-gray-600" />
+                  <Mic className="w-5 h-5 text-slate-600" />
                 </button>
                 <Button
                   onClick={handleSearch}
-                  className="bg-gradient-to-r from-[#F97316] to-[#ea6a0a] hover:from-[#ea6a0a] hover:to-[#F97316] text-white px-8 py-6 shadow-lg shadow-orange-500/30"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 shadow-lg"
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
                   Search with AI
@@ -193,10 +195,10 @@ export function Dashboard({ onNavigate }: DashboardProps) {
         </motion.div>
 
         {/* Quick Access Cards */}
-        <div className="mb-10">
+        <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-[#002D62]">Quick Access</h2>
-            <Button variant="ghost" className="text-[#F97316] hover:text-[#ea6a0a]">
+            <h2 className="text-slate-900 text-xl font-semibold">Quick Access</h2>
+            <Button variant="ghost" className="text-blue-600 hover:text-blue-700">
               View All
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -205,7 +207,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
           >
             {quickCards.map((card) => {
               const Icon = card.icon;
@@ -213,22 +215,30 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                 <motion.div key={card.title} variants={item}>
                   <Card 
                     onClick={() => onNavigate('results')}
-                    className="p-6 hover:shadow-2xl transition-all duration-300 cursor-pointer border-0 bg-white group relative overflow-hidden"
+                    className="p-4 sm:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200 bg-white group relative overflow-hidden"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        onNavigate('results');
+                      }
+                    }}
+                    aria-label={`Access ${card.title} documents`}
                   >
                     <div className={`absolute inset-0 bg-gradient-to-br ${card.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                     
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-4">
-                        <div className={`bg-gradient-to-br ${card.gradient} w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          <Icon className="w-7 h-7 text-white" />
+                        <div className={`bg-gradient-to-br ${card.gradient} w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                          <Icon className="w-6 h-6 text-white" />
                         </div>
-                        <Badge variant="secondary" className="text-lg px-3">
+                        <Badge variant="secondary" className="text-sm px-2 py-1">
                           {card.count}
                         </Badge>
                       </div>
-                      <h3 className="text-gray-900 mb-2">{card.title}</h3>
-                      <p className="text-gray-500 text-sm mb-3">{card.description}</p>
-                      <div className="flex items-center text-xs text-gray-400">
+                      <h3 className="text-slate-900 font-semibold mb-2">{card.title}</h3>
+                      <p className="text-slate-600 text-sm mb-3">{card.description}</p>
+                      <div className="flex items-center text-xs text-slate-500">
                         <TrendingUp className="w-3 h-3 mr-1" />
                         Total Items
                       </div>
@@ -246,14 +256,14 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <Card className="p-8 border-0 shadow-xl bg-white">
+          <Card className="p-6 lg:p-8 border border-slate-200 shadow-xl bg-white">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-md">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-[#002D62]">Recent Updates</h2>
+              <h2 className="text-slate-900 text-xl font-semibold">Recent Updates</h2>
             </div>
-            <div className="space-y-1">
+            <div className="space-y-2">
               {recentUpdates.map((update, index) => (
                 <motion.div
                   key={index}
@@ -261,21 +271,21 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
                   onClick={() => onNavigate('document')}
-                  className="flex items-start gap-4 p-5 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50/30 rounded-2xl transition-all duration-200 cursor-pointer group border-l-4 border-transparent hover:border-[#F97316]"
+                  className="flex items-start gap-4 p-4 hover:bg-slate-50 rounded-xl transition-all duration-200 cursor-pointer group border-l-4 border-transparent hover:border-blue-500"
                 >
                   <div className={`w-3 h-3 bg-gradient-to-br from-${update.color}-500 to-${update.color}-600 rounded-full mt-2 shadow-md group-hover:scale-125 transition-transform`} />
                   <div className="flex-1">
-                    <p className="text-gray-900 mb-2 group-hover:text-[#002D62] transition-colors">
+                    <p className="text-slate-900 mb-2 group-hover:text-blue-600 transition-colors font-medium">
                       {update.title}
                     </p>
                     <div className="flex items-center gap-3 text-sm">
-                      <span className="text-gray-500">{update.date}</span>
+                      <span className="text-slate-500">{update.date}</span>
                       <Badge className={`bg-${update.color}-100 text-${update.color}-700 hover:bg-${update.color}-100`}>
                         {update.type}
                       </Badge>
                     </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.div>
               ))}
             </div>

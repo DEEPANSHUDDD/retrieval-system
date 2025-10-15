@@ -18,28 +18,35 @@ export function Layout({ children, currentPage, onNavigate, onLogout }: LayoutPr
   };
 
   return (
-    <div className="flex min-h-screen bg-[#F9FAFB]">
+    <div className="flex min-h-screen bg-slate-50">
       {/* Sidebar Overlay */}
       {sidebarOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setSidebarOpen(false)}
           />
-          <div className="fixed left-0 top-0 bottom-0 z-50">
+          <div className="fixed left-0 top-0 bottom-0 z-50 lg:hidden">
             <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />
           </div>
         </>
       )}
 
+      {/* Desktop Sidebar */}
+      <div className="hidden lg:block">
+        <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />
+      </div>
+
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-w-0">
         <Header 
           onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
           onLogout={onLogout}
         />
-        <main className="flex-1 overflow-auto">
-          {children}
+        <main className="flex-1 overflow-auto bg-slate-50">
+          <div className="min-h-full">
+            {children}
+          </div>
         </main>
       </div>
     </div>
