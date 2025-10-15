@@ -162,7 +162,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                 </button>
                 <Button
                   onClick={handleSearch}
-                  className="bg-[#2F539B] hover:from-[#009E8E] hover:to-[#00BFA6] text-white px-8 py-6 shadow-lg shadow-[#00BFA6]/30"
+                  className="bg-[#2F539B] hover:from-[#009E8E] hover:to-[#00BFA6] text-blue px-8 py-6 shadow-lg shadow-[#00BFA6]/30"
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
                   Search with AI
