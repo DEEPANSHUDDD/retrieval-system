@@ -10,13 +10,13 @@ export function About() {
       icon: Zap,
       title: 'AI-Powered Search',
       description: 'Advanced natural language processing for intelligent document retrieval with high accuracy',
-      gradient: 'from-[#0A192F] to-[#112240]',
+      gradient: 'from-yellow-500 to-orange-500',
     },
     {
       icon: Target,
       title: 'Smart Filtering',
       description: 'Multi-dimensional filtering by department, year, and document type for precise results',
-      gradient: 'from-[#0A192F] to-[#112240]',
+      gradient: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Users,
@@ -42,7 +42,7 @@ export function About() {
   ];
 
   const stats = [
-    { value: '1,000+', label: 'Documents', gradient: 'from-[#0A192F] to-[#112240]' },
+    { value: '1,000+', label: 'Documents', gradient: 'from-blue-500 to-blue-600' },
     { value: '50+', label: 'Departments', gradient: 'from-purple-500 to-purple-600' },
     { value: '10K+', label: 'Users', gradient: 'from-orange-500 to-orange-600' },
     { value: '99.9%', label: 'Uptime', gradient: 'from-green-500 to-green-600' },
@@ -77,7 +77,7 @@ export function About() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
       <div className="p-8 max-w-7xl mx-auto">
         {/* Hero Section */}
         <motion.div
@@ -92,15 +92,15 @@ export function About() {
             className="inline-block mb-6"
           >
             <div className="relative">
-              <div className="w-24 h-24 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#112240] rounded-3xl flex items-center justify-center mx-auto shadow-2xl shadow-black/20">
+              <div className="w-24 h-24 bg-gradient-to-br from-[#002D62] via-[#003875] to-[#004080] rounded-3xl flex items-center justify-center mx-auto shadow-2xl shadow-blue-900/30">
                 <Globe className="w-12 h-12 text-white" />
               </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full flex items-center justify-center shadow-lg">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
             </div>
           </motion.div>
-          <h1 className="text-[#0A192F] mb-4">
+          <h1 className="text-[#002D62] mb-4">
             AI-Based Smart Information Retrieval System
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -110,7 +110,7 @@ export function About() {
             <Badge className="bg-green-100 text-green-700 border-green-200 px-4 py-2">
               Live & Running
             </Badge>
-            <Badge className="bg-slate-100 text-slate-700 border-slate-200 px-4 py-2">
+            <Badge className="bg-blue-100 text-blue-700 border-blue-200 px-4 py-2">
               SIH 2025
             </Badge>
           </div>
@@ -129,7 +129,7 @@ export function About() {
                 <div className={`w-12 h-12 bg-gradient-to-br ${stat.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-[#0A192F] mb-2">{stat.value}</h2>
+                <h2 className="text-[#002D62] mb-2">{stat.value}</h2>
                 <p className="text-gray-600 text-sm">{stat.label}</p>
               </Card>
             </motion.div>
@@ -142,15 +142,15 @@ export function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <Card className="p-10 mb-16 border-0 shadow-2xl bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#0A192F]/10 to-transparent rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-[#112240]/10 to-transparent rounded-full blur-3xl" />
+          <Card className="p-10 mb-16 border-0 shadow-2xl bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#F97316]/20 to-transparent rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-[#002D62]/20 to-transparent rounded-full blur-3xl" />
             
             <div className="max-w-4xl mx-auto text-center relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-[#0A192F] mb-6">Our Mission</h2>
+              <h2 className="text-[#002D62] mb-6">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed text-lg">
                 To revolutionize access to educational information by leveraging artificial intelligence 
                 and modern web technologies. We aim to make government policies, schemes, and regulations 
@@ -163,7 +163,7 @@ export function About() {
 
         {/* Features */}
         <div className="mb-16">
-          <h2 className="text-[#0A192F] text-center mb-10">Key Features</h2>
+          <h2 className="text-[#002D62] text-center mb-10">Key Features</h2>
           <motion.div
             variants={container}
             initial="hidden"
@@ -197,10 +197,10 @@ export function About() {
         >
           <Card className="p-10 mb-16 border-0 shadow-xl bg-white">
             <div className="text-center mb-8">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Code className="w-7 h-7 text-white" />
               </div>
-              <h2 className="text-[#0A192F] mb-2">Technology Stack</h2>
+              <h2 className="text-[#002D62] mb-2">Technology Stack</h2>
               <p className="text-gray-600">Built with cutting-edge technologies</p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
@@ -210,7 +210,7 @@ export function About() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                  className="px-6 py-3 bg-gradient-to-r from-[#0A192F] to-[#112240] text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+                  className="px-6 py-3 bg-gradient-to-r from-[#002D62] to-[#004080] text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
                 >
                   {tech}
                 </motion.div>
@@ -221,7 +221,7 @@ export function About() {
 
         {/* Team */}
         <div className="mb-16">
-          <h2 className="text-[#0A192F] text-center mb-10">Our Team</h2>
+          <h2 className="text-[#002D62] text-center mb-10">Our Team</h2>
           <motion.div
             variants={container}
             initial="hidden"
@@ -248,9 +248,9 @@ export function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
         >
-          <Card className="p-12 border-0 shadow-2xl bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#112240] text-white relative overflow-hidden">
+          <Card className="p-12 border-0 shadow-2xl bg-gradient-to-br from-[#002D62] via-[#003875] to-[#004080] text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A192F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97316]/20 rounded-full blur-3xl" />
             
             <div className="text-center max-w-2xl mx-auto relative z-10">
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -261,7 +261,7 @@ export function About() {
                 Have questions or feedback? We would love to hear from you!
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button className="bg-white text-[#0A192F] hover:bg-gray-100 shadow-xl px-8 py-6">
+                <Button className="bg-white text-[#002D62] hover:bg-gray-100 shadow-xl px-8 py-6">
                   <Mail className="w-5 h-5 mr-2" />
                   Email Us
                 </Button>

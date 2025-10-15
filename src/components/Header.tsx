@@ -24,7 +24,7 @@ export function Header({ onToggleSidebar, onLogout, onShowLogin, isLoggedIn }: H
           </button>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-[#0A192F] bg-gradient-to-r from-[#0A192F] to-[#112240] bg-clip-text text-transparent">
+              <h1 className="text-[#002D62] bg-gradient-to-r from-[#002D62] to-[#004080] bg-clip-text text-transparent">
                 Ministry of Education | Smart India Hackathon 2025
               </h1>
               <Badge className="bg-green-100 text-green-700 hover:bg-green-100 border-green-200">
@@ -32,7 +32,7 @@ export function Header({ onToggleSidebar, onLogout, onShowLogin, isLoggedIn }: H
               </Badge>
             </div>
             <p className="text-gray-500 text-sm flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-[#0A192F] rounded-full animate-pulse" />
+              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
               AI-Powered Smart Information Retrieval System
             </p>
           </div>
@@ -60,8 +60,8 @@ export function Header({ onToggleSidebar, onLogout, onShowLogin, isLoggedIn }: H
 
           {/* User Profile - Only show when logged in */}
           {isLoggedIn && (
-            <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100/50 rounded-xl border border-gray-200/50">
-              <div className="w-9 h-9 bg-gradient-to-br from-[#0A192F] to-[#112240] rounded-full flex items-center justify-center shadow-md">
+            <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-xl border border-orange-200/50">
+              <div className="w-9 h-9 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full flex items-center justify-center shadow-md">
                 <span className="text-white text-sm font-semibold">PG</span>
               </div>
               <div>
@@ -87,7 +87,7 @@ export function Header({ onToggleSidebar, onLogout, onShowLogin, isLoggedIn }: H
                 ) : (
                   <Button 
                     onClick={onShowLogin}
-                    className="bg-gradient-to-r from-[#0A192F] to-[#112240] hover:from-[#112240] hover:to-[#0A192F] text-white cursor-pointer transition-all duration-200 shadow-lg shadow-black/20"
+                    className="bg-gradient-to-r from-[#002D62] to-[#004080] hover:from-[#001f45] hover:to-[#002D62] text-white cursor-pointer transition-all duration-200 shadow-lg shadow-blue-900/30"
                   >
                     <LogIn className="w-4 h-4 mr-2" />
                     Login
