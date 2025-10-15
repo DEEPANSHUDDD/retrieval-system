@@ -68,7 +68,7 @@ export function Results({ onNavigate }: ResultsProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50/30 to-gray-50">
       <div className="p-8 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -130,12 +130,12 @@ export function Results({ onNavigate }: ResultsProps) {
             >
               <Card className="p-7 hover:shadow-2xl transition-all duration-300 border-0 bg-white group relative overflow-hidden">
                 {/* Gradient Accent */}
-                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#F97316] to-[#ea6a0a] opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#334155] to-[#475569] opacity-0 group-hover:opacity-100 transition-opacity" />
                 
                 <div className="flex items-start gap-6">
                   {/* Icon */}
                   <div className="relative">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-900/20 group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#0A192F] to-[#334155] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-slate-900/20 group-hover:scale-110 transition-transform">
                       <FileEdit className="w-8 h-8 text-white" />
                     </div>
                     {result.tags.includes('Verified') && (
@@ -187,7 +187,7 @@ export function Results({ onNavigate }: ResultsProps) {
                             tag === 'Verified'
                               ? 'bg-green-100 text-green-700 hover:bg-green-100 border-green-200'
                               : tag === 'Draft'
-                              ? 'bg-orange-100 text-orange-700 hover:bg-orange-100 border-orange-200'
+                              ? 'bg-slate-100 text-slate-700 hover:bg-slate-100 border-slate-200'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-100'
                           }
                         >
@@ -205,7 +205,7 @@ export function Results({ onNavigate }: ResultsProps) {
                     <div className="flex gap-3">
                       <Button
                         onClick={() => onNavigate('document')}
-                        className="bg-gradient-to-r from-[#002D62] to-[#004080] hover:from-[#001f45] hover:to-[#002D62] text-white shadow-lg shadow-blue-900/20"
+                        className="bg-gradient-to-r from-[#0A192F] to-[#334155] hover:from-[#1e293b] hover:to-[#0A192F] text-white shadow-lg shadow-slate-900/20"
                       >
                         <Eye className="w-4 h-4 mr-2" />
                         View Document
@@ -228,9 +228,9 @@ export function Results({ onNavigate }: ResultsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <Card className="p-7 mt-8 border-0 shadow-xl bg-gradient-to-br from-blue-50 to-purple-50">
-            <h3 className="text-[#002D62] mb-5 flex items-center gap-2">
-              <Star className="w-5 h-5 text-[#F97316]" />
+          <Card className="p-7 mt-8 border-0 shadow-xl bg-gradient-to-br from-slate-50 to-gray-50">
+            <h3 className="text-[#0A192F] mb-5 flex items-center gap-2">
+              <Star className="w-5 h-5 text-[#334155]" />
               Related Documents
             </h3>
             <div className="space-y-3">
@@ -243,13 +243,13 @@ export function Results({ onNavigate }: ResultsProps) {
                   key={i}
                   className="flex items-center gap-3 p-4 bg-white rounded-xl hover:shadow-lg transition-all cursor-pointer group border border-gray-100"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#334155] to-[#475569] rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <FileEdit className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-sm text-gray-700 flex-1 group-hover:text-[#002D62] transition-colors">
                     {doc}
                   </span>
-                  <Eye className="w-4 h-4 text-gray-400 group-hover:text-[#F97316] transition-colors" />
+                  <Eye className="w-4 h-4 text-gray-400 group-hover:text-[#334155] transition-colors" />
                 </div>
               ))}
             </div>

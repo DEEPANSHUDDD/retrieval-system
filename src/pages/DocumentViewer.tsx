@@ -57,7 +57,7 @@ CONCLUSION
 The National Education Policy 2020 represents a comprehensive framework for elementary education to higher education as well as vocational training in both rural and urban India. The policy aims to transform the education system by 2040 into one that contributes to sustainable livelihoods and economic independence of all citizens.`;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50/30 to-gray-50">
       <div className="p-8 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -75,22 +75,22 @@ The National Education Policy 2020 represents a comprehensive framework for elem
             <p className="text-gray-600">National Education Policy (NEP) 2020</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <ZoomIn className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <ZoomOut className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <Bookmark className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <Download className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <Printer className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="icon" className="hover:bg-blue-50">
+            <Button variant="outline" size="icon" className="hover:bg-slate-50">
               <Share2 className="w-4 h-4" />
             </Button>
           </div>
@@ -121,9 +121,9 @@ The National Education Policy 2020 represents a comprehensive framework for elem
             transition={{ delay: 0.3 }}
             className="lg:col-span-1"
           >
-            <Card className="p-7 border-0 shadow-2xl bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 sticky top-24">
+            <Card className="p-7 border-0 shadow-2xl bg-gradient-to-br from-slate-50 via-gray-50 to-slate-50 sticky top-24">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#334155] to-[#475569] rounded-xl flex items-center justify-center shadow-lg shadow-slate-500/30">
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
                 <h2 className="text-[#002D62]">AI Insights</h2>
@@ -131,7 +131,7 @@ The National Education Policy 2020 represents a comprehensive framework for elem
 
               {!showSummary && !loading && (
                 <div className="text-center py-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-blue-900/30 animate-pulse">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#0A192F] to-[#334155] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-slate-900/30 animate-pulse">
                     <Sparkles className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-gray-900 mb-3">AI-Powered Analysis</h3>
@@ -140,7 +140,7 @@ The National Education Policy 2020 represents a comprehensive framework for elem
                   </p>
                   <Button
                     onClick={handleGetSummary}
-                    className="bg-gradient-to-r from-[#F97316] to-[#ea6a0a] hover:from-[#ea6a0a] hover:to-[#F97316] text-white w-full py-6 shadow-lg shadow-orange-500/30"
+                    className="bg-gradient-to-r from-[#0A192F] to-[#334155] hover:from-[#1e293b] hover:to-[#0A192F] text-white w-full py-6 shadow-lg shadow-slate-900/30"
                   >
                     <Sparkles className="w-5 h-5 mr-2" />
                     Generate AI Summary
@@ -151,9 +151,9 @@ The National Education Policy 2020 represents a comprehensive framework for elem
               {loading && (
                 <div className="text-center py-16">
                   <div className="relative w-20 h-20 mx-auto mb-6">
-                    <div className="absolute inset-0 border-4 border-[#F97316]/20 rounded-full" />
-                    <div className="absolute inset-0 border-4 border-[#F97316] border-t-transparent rounded-full animate-spin" />
-                    <div className="absolute inset-2 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full flex items-center justify-center">
+                    <div className="absolute inset-0 border-4 border-[#334155]/20 rounded-full" />
+                    <div className="absolute inset-0 border-4 border-[#334155] border-t-transparent rounded-full animate-spin" />
+                    <div className="absolute inset-2 bg-gradient-to-br from-[#334155] to-[#475569] rounded-full flex items-center justify-center">
                       <Sparkles className="w-8 h-8 text-white animate-pulse" />
                     </div>
                   </div>
@@ -184,28 +184,28 @@ The National Education Policy 2020 represents a comprehensive framework for elem
                     </p>
                   </div>
 
-                  <div className="p-5 bg-white rounded-2xl shadow-sm border border-blue-100">
+                  <div className="p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg flex items-center justify-center">
                         <Sparkles className="w-4 h-4 text-white" />
                       </div>
                       <h3 className="text-sm text-[#002D62] font-semibold">Key Points</h3>
                     </div>
                     <ul className="space-y-3 text-sm text-gray-700">
                       <li className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full mt-1.5 flex-shrink-0" />
+                        <span className="w-2 h-2 bg-gradient-to-br from-[#334155] to-[#475569] rounded-full mt-1.5 flex-shrink-0" />
                         <span>New 5+3+3+4 structure replacing 10+2</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full mt-1.5 flex-shrink-0" />
+                        <span className="w-2 h-2 bg-gradient-to-br from-[#334155] to-[#475569] rounded-full mt-1.5 flex-shrink-0" />
                         <span>Flexible degree programs with multiple exit options</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full mt-1.5 flex-shrink-0" />
+                        <span className="w-2 h-2 bg-gradient-to-br from-[#334155] to-[#475569] rounded-full mt-1.5 flex-shrink-0" />
                         <span>50% vocational education exposure by 2025</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-full mt-1.5 flex-shrink-0" />
+                        <span className="w-2 h-2 bg-gradient-to-br from-[#334155] to-[#475569] rounded-full mt-1.5 flex-shrink-0" />
                         <span>Mother tongue instruction till Grade 5</span>
                       </li>
                     </ul>

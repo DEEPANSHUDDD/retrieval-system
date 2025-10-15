@@ -21,7 +21,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#002D62] via-[#003875] to-[#001f45]">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#0A192F] via-[#1e293b] to-[#0f172a]">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Grid Pattern */}
@@ -43,7 +43,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+          className="absolute top-20 left-20 w-96 h-96 bg-slate-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -55,7 +55,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-slate-400/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -71,15 +71,15 @@ export function Login({ onLogin, onClose }: LoginProps) {
         />
 
         {/* Tricolor Accent Lines */}
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-white to-green-500 opacity-50" />
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 via-white to-orange-500 opacity-50" />
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-500 via-white to-green-500 opacity-50" />
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 via-white to-slate-500 opacity-50" />
 
         {/* Animated Data Nodes */}
         <svg className="absolute inset-0 w-full h-full opacity-20">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#F97316" stopOpacity="0.5" />
+              <stop offset="0%" stopColor="#334155" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#475569" stopOpacity="0.5" />
             </linearGradient>
           </defs>
           {[...Array(5)].map((_, i) => (
@@ -117,7 +117,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
             <div className="mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl">
-                  <Shield className="w-12 h-12 text-orange-500" />
+                  <Shield className="w-12 h-12 text-slate-500" />
                 </div>
                 <div>
                   <h2 className="text-white mb-1">Ministry of Education</h2>
@@ -127,10 +127,10 @@ export function Login({ onLogin, onClose }: LoginProps) {
               <h1 className="text-white mb-4 text-5xl">
                 Smart Information Retrieval System
               </h1>
-              <p className="text-2xl text-blue-200 mb-8">AI-powered Knowledge Access Portal</p>
+              <p className="text-2xl text-slate-200 mb-8">AI-powered Knowledge Access Portal</p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                  <div className="w-2 h-2 bg-slate-500 rounded-full" />
                   <p className="text-white/80">Secure & Verified Government Data</p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -138,7 +138,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
                   <p className="text-white/80">AI-Powered Smart Search</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                  <div className="w-2 h-2 bg-slate-400 rounded-full" />
                   <p className="text-white/80">Real-time Policy Updates</p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
                   initial={{ width: 0 }}
                   animate={{ width: `${60 + i * 15}%` }}
                   transition={{ duration: 1, delay: 0.5 + i * 0.2 }}
-                  className="h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full"
+                  className="h-1 bg-gradient-to-r from-slate-500 to-slate-400 rounded-full"
                 />
               ))}
             </div>
@@ -177,10 +177,10 @@ export function Login({ onLogin, onClose }: LoginProps) {
 
               {/* Mobile Logo */}
               <div className="lg:hidden mb-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#002D62] to-[#004080] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0A192F] to-[#334155] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-[#002D62] mb-2">Welcome Back</h2>
+                <h2 className="text-[#0A192F] mb-2">Welcome Back</h2>
                 <p className="text-gray-600">Smart Information Retrieval System</p>
               </div>
 
@@ -243,7 +243,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#002D62] to-[#004080] hover:from-[#001f45] hover:to-[#002D62] text-white py-6 text-lg shadow-lg shadow-blue-900/30 group"
+                  className="w-full bg-gradient-to-r from-[#0A192F] to-[#334155] hover:from-[#1e293b] hover:to-[#0A192F] text-white py-6 text-lg shadow-lg shadow-slate-900/30 group"
                 >
                   Sign In
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -304,7 +304,7 @@ export function Login({ onLogin, onClose }: LoginProps) {
       </div>
 
       {/* Corner Accents */}
-      <div className="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-orange-500/50 rounded-tl-3xl" />
+      <div className="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-slate-500/50 rounded-tl-3xl" />
       <div className="absolute bottom-0 right-0 w-32 h-32 border-b-4 border-r-4 border-green-500/50 rounded-br-3xl" />
     </div>
   );

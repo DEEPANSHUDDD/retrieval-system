@@ -17,7 +17,7 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
   ];
 
   return (
-    <div className="w-72 bg-gradient-to-b from-[#002D62] via-[#003875] to-[#002D62] min-h-screen flex flex-col shadow-2xl">
+    <div className="w-72 bg-gradient-to-b from-[#0A192F] via-[#1e293b] to-[#0A192F] min-h-screen flex flex-col shadow-2xl">
       {/* Logo Section */}
       <div className="p-6 border-b border-white/10">
         <motion.div 
@@ -26,10 +26,10 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
           className="flex items-center gap-3"
         >
           <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#F97316] to-[#ea6a0a] rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#334155] to-[#475569] rounded-xl flex items-center justify-center shadow-lg shadow-slate-500/30">
               <Shield className="w-7 h-7 text-white" />
             </div>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-[#002D62]" />
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-[#0A192F]" />
           </div>
           <div>
             <h2 className="text-white font-semibold">Ministry of Education</h2>
@@ -56,14 +56,14 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
                   onClick={() => onNavigate(item.id)}
                   className={`w-full group relative flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                     isActive
-                      ? 'bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white shadow-lg shadow-blue-500/30'
+                      ? 'bg-gradient-to-r from-[#334155] to-[#475569] text-white shadow-lg shadow-slate-500/30'
                       : 'text-white/70 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-gradient-to-r from-[#3b82f6] to-[#2563eb] rounded-xl"
+                      className="absolute inset-0 bg-gradient-to-r from-[#334155] to-[#475569] rounded-xl"
                       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                     />
                   )}
